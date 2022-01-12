@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="https://blog.ustsking.top/favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="读书。买花，长大。"><meta charset="UTF-8"><title>Oh-My-ZSH安装配置 | Ngu2a的博客</title>
+<link href="https://blog.ustsking.top/styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://blog.ustsking.top/media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/gh/KLiuZero/kliuzero.github.io@main/media/js/jquery.min.js"></script>
+
+
+
+	<script src="./media/live2d/autoload.js"></script>
+
+<link rel="canonical" href="https://blog.ustsking.top/post/2021112801/" />
+	<script language="Javascript">
+		document.οncοntextmenu=new Function("event.returnValue=false");
+		document.onselectstart=new Function("event.returnValue=false");
+	</script>
+</head>
+<body>
+<div class="progress"></div><style>.progress{background:linear-gradient(to right,#87ceeb var(--scroll),transparent 0);background-repeat:no-repeat;position:fixed;width:100%;height:4px;z-index:1}</style><div class="darkmode-background"></div><div class="darkmode-layer"></div>
+<noscript><p class="warn" >本页面需要浏览器支持（启用）JavaScript</p></noscript><div class="header"><div class="logo_title"><div class="title animated fadeInDown"><a href="https://blog.ustsking.top"><img alt="logo" style="display:inline-block;" src="https://blog.ustsking.top/images/avatar.png"/></a><h1 title="Ngu2a的博客" class="weaklink"><a  href="/">Ngu2a的博客</a></h1>
+
+<div class="navbar weaklink">
+<div class="normal_nav">
+<div class="bitcron_nav_container"><div class="bitcron_nav"><div class="bitcron_nav"><div style="display:flex;justify-content:center;"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/reading" class="selected active current nav__item" >读书</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/todo" class="selected active current nav__item" >代办</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li></ul></nav>
+<div style="float:right;margin-top:1em"><form id="gridea-search-form" data-update="1578893743252" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="Search..."></form></div><div style="margin-left:0.5em;margin-top:1.2em"><input id="switch_default" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+<div class="clear clear_nav_inline_end"></div></div></div><div class="clear clear_nav_end"></div></div></div><div class="hamberger" href="javascript:void(0)" onclick="btn_toggle();"><i class="iconfont icon-category"></i></div></div></div></div>
+<div id="hn" class="no-js hidden_nav animated fadeInDown"><div class="bitcron_nav_container"><div class="bitcron_nav"><nav class="mixed_site_nav_wrap site_nav_wrap"><ul class="mixed_site_nav site_nav sm sm-base">	<li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/reading" class="selected active current nav__item" >读书</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/todo" class="selected active current nav__item" >代办</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a></li><li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a></li></ul><div class="clear clear_nav_inline_end"></div></nav></div><div class="clear clear_nav_end"></div></div>
+<div style="display:flex;justify-content:center;inline-block;text-align:center;margin-top:7%"><div><form id="gridea-search-form" data-update="1641956806742" action="/search/index.html"><input class="search-input" autocomplete="off" spellcheck="false" name="q"  placeholder="Search..." /></form></div><div style="margin-left:0.5em"><input id="switch_default_h" onclick="mobileBtn()" type="checkbox" class="switch_default"><label for="switch_default" class="toggleBtn"></label></div></div>
+</div></div>
+<script>function enableDarkmode(){document.body.classList.add("darkmode"),document.getElementById("switch_default").checked=1,document.getElementById("switch_default_h").checked=1}function removeDarkmode(){document.body.classList.remove("darkmode"),document.getElementById("switch_default").checked=0,document.getElementById("switch_default_h").checked=0}function getCookie(a){var b,c=new RegExp("(^| )"+a+"=([^;]*)(;|$)");return(b=document.cookie.match(c))?unescape(b[2]):null}cookie=getCookie("darkmode"),"enable"==cookie&&enableDarkmode(),window.matchMedia("(prefers-color-scheme: dark)").matches&&"disable"!==cookie&&(enableDarkmode(),document.cookie="darkmode=enable; path=/");var mobileBtn=function(){1==document.getElementById("switch_default").checked?(enableDarkmode(),document.cookie="darkmode=enable; path=/"):(removeDarkmode(),document.cookie="darkmode=disable; path=/")};</script>
+
+<style>.deng-box{position:fixed;top:-40px;left:-80px;z-index:9999}.deng-box1{position:fixed;top:-30px;left:-80px;z-index:9999}.deng-box1 .deng{position:relative;width:120px;height:90px;margin:50px;background:#d8000f;background:rgba(216,0,15,0.8);border-radius:50% 50%;-webkit-transform-origin:50% -100px;-webkit-animation:swing 5s infinite ease-in-out;box-shadow:-5px 5px 30px 4px rgba(252,144,61,1)}.deng{position:relative;width:120px;height:90px;margin:50px;background:#d8000f;background:rgba(216,0,15,0.8);border-radius:50% 50%;-webkit-transform-origin:50% -100px;-webkit-animation:swing 3s infinite ease-in-out;box-shadow:-5px 5px 50px 4px rgba(250,108,0,1)}.deng-a{width:100px;height:90px;background:#d8000f;background:rgba(216,0,15,0.1);margin:12px 8px 8px 8px;border-radius:50% 50%;border:2px solid #dc8f03}.deng-b{width:45px;height:90px;background:#d8000f;background:rgba(216,0,15,0.1);margin:-4px 8px 8px 26px;border-radius:50% 50%;border:2px solid #dc8f03}.xian{position:absolute;top:-20px;left:60px;width:2px;height:20px;background:#dc8f03}.shui-a{position:relative;width:5px;height:20px;margin:-5px 0 0 59px;-webkit-animation:swing 4s infinite ease-in-out;-webkit-transform-origin:50% -45px;background:#ffa500;border-radius:0 0 5px 5px}.shui-b{position:absolute;top:14px;left:-2px;width:10px;height:10px;background:#dc8f03;border-radius:50%}.shui-c{position:absolute;top:18px;left:-2px;width:10px;height:35px;background:#ffa500;border-radius:0 0 0 5px}.deng:before{position:absolute;top:-7px;left:29px;height:12px;width:60px;content:" ";display:block;z-index:999;border-radius:5px 5px 0 0;border:solid 1px #dc8f03;background:#ffa500;background:linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03)}.deng:after{position:absolute;bottom:-7px;left:10px;height:12px;width:60px;content:" ";display:block;margin-left:20px;border-radius:0 0 5px 5px;border:solid 1px #dc8f03;background:#ffa500;background:linear-gradient(to right,#dc8f03,#ffa500,#dc8f03,#ffa500,#dc8f03)}.deng-t{font-family:华文行楷,Arial,Lucida Grande,Tahoma,sans-serif;color:#dc8f03;font-weight:bold;line-height:85px;text-align:center}.night .deng-t,.night .deng-box,.night .deng-box1{background:transparent !important}@-moz-keyframes swing{0%{-moz-transform:rotate(-10deg)}50%{-moz-transform:rotate(10deg)}100%{-moz-transform:rotate(-10deg)}}@-webkit-keyframes swing{0%{-webkit-transform:rotate(-10deg)}50%{-webkit-transform:rotate(10deg)}100%{-webkit-transform:rotate(-10deg)}}</style>
+<div class="deng-box"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">节</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div> <div class="deng-box1"><div class="deng"><div class="xian"></div><div class="deng-a"><div class="deng-b"><div class="deng-t">春节</div></div></div><div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div></div></div>
+
+
+
+
+<div class="main"><div class="main-inner"><div class="content">
+<article class="post">
+<h2 class="post_title sm_margin"><a>Oh-My-ZSH安装配置</a></h2>
+<script>function lan(){if(document.getElementById("lan").innerText=="繁"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_tw.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="简"}else{if(document.getElementById("lan").innerText=="簡"){var s=document.getElementById("tongwenlet_cn");if(s!=null){document.body.removeChild(s)}var s=document.createElement("script");s.language="javascript";s.type="text/javascript";s.src="https://cdn.jsdelivr.net/gh/qyxtim/Static@1.1/bookmarklet_cn.js";s.id="tongwenlet_cn";document.body.appendChild(s);document.getElementById("lan").innerHTML="繁"}}};</script>
+<section class="post_details"><i class="iconfont icon-calendar"></i><span style="margin-right:15px"> 2021-11-28</span><i class="iconfont icon-browse"></i><span style="margin-right:15px"> <span id="busuanzi_value_page_pv"></span> Views</span><i class="iconfont icon-category"></i><span class="weaklink" style="margin-right:15px">	<a href="https://blog.ustsking.top/tag/GmvuKPfnx8/" class="tag">Linux</a></span><i class="iconfont icon-caret-down"></i><span style="margin-right:15px">845字</span><i class="iconfont icon-naozhong"></i><span style="margin-right:15px">5 min read</span><a id="lan" href="javascript:void(0);"onclick="lan();"title="调整简繁体" style="margin-right:15px;">繁</a>
+</section>
+
+<img class="featureImg" alt="featureimg" src="https://w.wallhaven.cc/full/3z/wallhaven-3z7med.jpg" referrerpolicy="no-referrer">
+
+<div style="display:flex">
+<div class="md_block" id="md_block">
+<div class="round-shape-one"></div>
+<!--more-->
+<h2 id="oh-my-zsh-是什么"><strong>Oh My Zsh 是什么</strong></h2>
+<ul>
+<li><strong>Oh My Zsh</strong> 是一款社区驱动的命令行工具，正如它的主页上说的，<strong>Oh My Zsh</strong> 是一种生活方式。它基于 <strong>zsh</strong> 命令行，提供了主题配置，插件机制，已经内置的便捷操作。给我们一种全新的方式使用命令行。</li>
+<li><strong>Oh My Zsh</strong> 是基于 <strong>zsh</strong> 命令行的一个扩展工具集，提供了丰富的扩展功能。</li>
+<li>安装 <strong>Oh My Zsh</strong> 前提条件：必须已安装 <strong>zsh</strong></li>
+</ul>
+<h2 id="zsh-是什么"><strong>Zsh 是什么</strong></h2>
+<ul>
+<li>
+<p><strong>Zsh</strong> 是一款强大的虚拟终端，既是一个系统的虚拟终端，也可以作为一个脚本语言的交互解析器。</p>
+<pre><code class="language-bash"># 打开终端，在终端上输入:
+zsh --version
+
+# 这个命令来查看我们的电脑上是否安装了 Zsh # 端查询版本为： zsh 5.8 (x86_64-apple-darwin20.0)*
+</code></pre>
+</li>
+<li>
+<p>终端查询版本为： <strong>zsh 5.7.1 (x86_64-apple-darwin18.2.0)</strong></p>
+<pre><code class="language-bash"># 查看系统当前 shell
+cat /etc/shells
+</code></pre>
+</li>
+</ul>
+<h3 id="安装-oh-my-zsh-方法"><strong>安装 Oh My Zsh 方法</strong></h3>
+<ul>
+<li>
+<p><strong>可以通过 curl 或 wget 两种方式来安装，用一条命令即可安装。</strong></p>
+<pre><code class="language-bash"># 安装zsh
+apt install zsh
+
+# 切换默认的shell为zsh=
+chsh -s /bin/zsh
+
+# 安装oh-my-zsh
+sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+
+# 安装失败可以使用这条命令
+sh -c &quot;$(curl -fsSL [https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh](https://gitee.com/shmhlsy/oh-my-zsh-install.sh/raw/master/install.sh))&quot;
+
+# 下载命令补全插件
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+# zshrc配置文件中修改如下内容
+plugins=(git zsh-autosuggestions)
+
+# 重新加载zsh配置
+zsh
+</code></pre>
+</li>
+</ul>
+<h4 id="安装过程中输出如下"><strong>安装过程中输出如下：</strong></h4>
+<pre><code class="language-bash">xxxx% sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh**)**&quot; 
+Cloning Oh My Zsh...
+Cloning into '/Users/xxxx/.oh-my-zsh'...
+remote: Counting objects: 831, done.
+remote: Compressing objects: 100% (700/700), done.
+remote: Total 831 (delta 14), reused 775 (delta 10), pack-reused 0
+Receiving objects: 100% (831/831), 567.67 KiB | 75.00 KiB/s, done.
+Resolving deltas: 100% (14/14), done.
+Looking for an existing zsh config...
+Found ~/.zshrc. Backing up to ~/.zshrc.pre-oh-my-zsh
+Using the Oh My Zsh template file and adding it to ~/.zshrc
+             __                                     __   
+      ____  / /_     ____ ___  __  __   ____  _____/ /_  
+     / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ 
+    / /_/ / / / /  / / / / / / /_/ /    / /_(__  ) / / / 
+    \____/_/ /_/  /_/ /_/ /_/\__, /    /___/____/_/ /_/  
+                            /____/                       ....is now installed!
+Please look over the ~/.zshrc file to select plugins, themes, and options.
+p.s. Follow us at https://twitter.com/ohmyzsh.
+p.p.s. Get stickers and t-shirts at http://shop.planetargon.com.
+</code></pre>
+<h3 id="设置主题"><strong>设置主题</strong></h3>
+<h4 id="设置固定主题"><strong>设置固定主题</strong></h4>
+<ul>
+<li>
+<p><strong>安装完毕后，我们就可以使用了，先来简单配置一下，Oh My Zsh 提供了很多主题风格，我们可以根据自己的喜好，设置主题风格</strong></p>
+<pre><code class="language-bash">open ~/.zshrc
+
+# 找到 ZSH_THEME# robbyrussell 是默认的主题ZSH_THEME=&quot;robbyrussell&quot;
+
+# ZSH_THEME=&quot;样式名称&quot;
+</code></pre>
+</li>
+<li>
+<p>保存这个文件文件，重新打开终端。</p>
+</li>
+</ul>
+<h4 id="设置随机主题"><strong>设置随机主题</strong></h4>
+<ul>
+<li>
+<p><strong>我们还可以随机设置主题：</strong></p>
+</li>
+<li>
+<p>步骤同上</p>
+<pre><code class="language-bash">ZSH_THEME=&quot;random&quot;
+</code></pre>
+</li>
+</ul>
+<h4 id="查看主题名称"><strong>查看主题名称</strong></h4>
+<ul>
+<li>
+<p><strong>Oh My Zsh</strong> 默认自带了一些默认主题，存放在 <strong>~/.oh-my-zsh/themes</strong> 目录中。我们可以查看这些主题</p>
+</li>
+<li>
+<p>终端输入：</p>
+<pre><code class="language-bash">cd ~/.oh-my-zsh/themes &amp;&amp; ls
+</code></pre>
+</li>
+</ul>
+<p><a href="https://link.zhihu.com/?target=https%3A//github.com/robbyrussell/oh-my-zsh/wiki/Themes">查看更多主题样式：github.com/robbyrussell/oh-my-zsh/wiki/Themes</a></p>
+<h3 id="卸载-oh-my-zsh"><strong>卸载 Oh My Zsh</strong></h3>
+<ul>
+<li>终端输入 ：</li>
+</ul>
+<pre><code class="language-bash">uninstall_oh_my_zsh
+Are you sure you want to remove Oh My Zsh? [y/N]  Y
+</code></pre>
+<ul>
+<li>终端提示信息：</li>
+</ul>
+<pre><code class="language-bash">Removing ~/.oh-my-zsh
+Looking for original zsh config...
+Found ~/.zshrc.pre-oh-my-zsh -- Restoring to ~/.zshrc
+Found ~/.zshrc -- Renaming to ~/.zshrc.omz-uninstalled-20170820200007
+Your original zsh config was restored. Please restart your session.
+Thanks for trying out Oh My Zsh. It's been uninstalled.
+</code></pre>
+
+<span id="footnote"></span>
+<div id = "warn"></div>
+</div>
+<div class="toc-container"><ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#oh-my-zsh-%E6%98%AF%E4%BB%80%E4%B9%88"><strong>Oh My Zsh 是什么</strong></a></li>
+<li><a href="#zsh-%E6%98%AF%E4%BB%80%E4%B9%88"><strong>Zsh 是什么</strong></a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85-oh-my-zsh-%E6%96%B9%E6%B3%95"><strong>安装 Oh My Zsh 方法</strong></a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E4%B8%AD%E8%BE%93%E5%87%BA%E5%A6%82%E4%B8%8B"><strong>安装过程中输出如下：</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98"><strong>设置主题</strong></a>
+<ul>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9A%E4%B8%BB%E9%A2%98"><strong>设置固定主题</strong></a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AE%E9%9A%8F%E6%9C%BA%E4%B8%BB%E9%A2%98"><strong>设置随机主题</strong></a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E4%B8%BB%E9%A2%98%E5%90%8D%E7%A7%B0"><strong>查看主题名称</strong></a></li>
+</ul>
+</li>
+<li><a href="#%E5%8D%B8%E8%BD%BD-oh-my-zsh"><strong>卸载 Oh My Zsh</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="fullPage"><canvas id="canvas"></canvas></div>
+</article>
+<div id="eof"><span>EOF</span></div><div class="round-shape-one"></div>
+<section>
+<div class="doc_comments">
+
+</div></section>
+</div></div></div><script>
+"use strict";!function(){for(var n=document.getElementsByTagName("pre"),e=n.length,s=0;s<e;s++){n[s].innerHTML='<span class="line-number"></span>'+n[s].innerHTML+'<span class="cl"></span>';for(var a=n[s].innerHTML.split(/\n/).length,r=0;r<a-1;r++){n[s].getElementsByTagName("span")[0].innerHTML+="<span>"+(r+1)+"</span>"}}}();
+let mainNavLinks=document.querySelectorAll(".markdownIt-TOC a");window.addEventListener("scroll",event=>{let fromTop=window.scrollY;mainNavLinks.forEach((link,index)=>{let section=document.getElementById(decodeURI(link.hash).substring(1));let nextSection=null
+if(mainNavLinks[index+1]){nextSection=document.getElementById(decodeURI(mainNavLinks[index+1].hash).substring(1));}
+if(section.offsetTop<=fromTop){if(nextSection){if(nextSection.offsetTop>fromTop){link.classList.add("currentToc");}else{link.classList.remove("currentToc");}}else{link.classList.add("currentToc");}}else{link.classList.remove("currentToc");}});});
+var h=document.documentElement,b=document.body,st="scrollTop",sh="scrollHeight",progress=document.querySelector(".progress"),scroll;document.addEventListener("scroll",function(){scroll=(h[st]||b[st])/((h[sh]||b[sh])-h.clientHeight)*100;progress.style.setProperty("--scroll",scroll+"%")});
+var wxScale=new WxScale({fullPage:document.querySelector("#fullPage"),canvas:document.querySelector("#canvas")});var imgBox=document.querySelectorAll("#md_block img");for(var i=0;i<imgBox.length;i++){imgBox[i].onclick=function(e){wxScale.start(this)}};
+</script>
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a>
+<div class="footer animated fadeInDown">
+    <div class="site_footer">
+        <div class="mysocials">
+            <div class="my_socials">
+                
+                
+                
+                
+                
+                
+                
+                
+                    <a href="https://github.com/KLiuZero"title="github">
+                        <i class="iconfont icon-github"></i>
+                    </a>
+                
+                
+                
+                    <a href="mailto:2838080432@qq.com"title="envelope">
+                        <i class="iconfont icon-envelope"></i>
+                    </a>
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+        <div class="copyright"id="copyright">
+            <a href="post\hidden" target=\"_blank\">我想在黄昏写上一封书信，</a><a href="https://www.loveljj.top" target="_blank">载着落日的余晖和银河的浪漫，寄给你，寄给温柔本身。</a></br>
+Copyright © 2021-present <a href="https://blog.ustsking.top" style="margin:0;">
+                Ngu2a的博客
+            </a>.
+        </div>
+<span style="display: inline;margin-right:15px;">👁<strong>
+        <span id="busuanzi_value_site_uv"></span></strong>
+</span>
+        <span id="busuanzi_container_page_pv" style="display: inline;">
+            <span>📚<strong>26</strong> posts</span>
+    </div>
+</div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+<script type="text/javascript" async src="https://blog.ustsking.top/media/js/prism.js"></script>
+</body>
+</html>
